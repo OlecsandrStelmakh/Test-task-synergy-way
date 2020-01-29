@@ -6,9 +6,9 @@ import { Item } from '../shared/item.module';
 })
 export class ItemListService {
   private items: Item[] = [
-    new Item (1,"article 1","Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",25),
-    new Item (2,"article 2","Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",35),
-    new Item (3,"article 3","Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",45)
+    {"id":1,"name":"article 1","label":"Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","price":25},
+    {"id":2,"name":"article 2","label":"Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","price":35},
+    {"id":3,"name":"article 3","label":"Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","price":45}
   ]
 
   constructor() { }
