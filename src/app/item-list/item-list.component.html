@@ -1,0 +1,14 @@
+
+<div *ngFor="let item of items">
+    <div class="row">
+        <div class="col-md-8">
+            <h3>{{item.name}}</h3>
+            <p>{{item.label}}</p>
+        </div>
+        <div class="col-md-4 left d-flex flex-row justify-content-between">
+            <p class="m-md-auto max-w-50">Price: {{item.price}}</p>
+            <button class="btn btn-light my-auto" (click)="addToCart(item)">add to cart</button>
+        </div>
+    </div>
+    <hr class="mt-0">
+</div>

@@ -1,0 +1,20 @@
+<ul class="list-group">
+    <li class="list-group-item d-flex flex-row flex-wrap justify-content-between px-1 px-sm-3" *ngFor="let item of cartList; let i = index">
+        <span class="">{{item.name}}</span>
+        <div class="d-flex flex-row">
+            <button class="" (click)='changeQuantity("-",i)'>-</button>
+            <div class="overflow-hidden text-center text-nowrap" style="width: 100px">qty : {{item.quantity}}  *{{item.price}}</div>
+            <button class="" (click)='changeQuantity("+",i)'>+</button>
+        </div>
+        <div class="d-flex flex-row">
+            <span class="d-none d-sm-inline">price: </span>
+            <div class="overflow-hidden text-right text-nowrap" style="width: 40px">{{item.price*item.quantity}}</div>
+        </div>
+    </li>
+    <li class="list-group-item text-center" *ngIf='!cartList[0]'>
+        <i>Cart is empty</i>
+    </li>
+    <li class="list-group-item text-right">
+        <span>sum: {{sum}}</span>
+    </li>
+</ul>
